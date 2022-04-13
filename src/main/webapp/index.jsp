@@ -15,5 +15,12 @@
 			</h1>
 		</div>
 		
+		<div class="form" >
+			<form action="login.jsp">
+				<input type="text" placeholder="username" />
+				<input type="password" placeholder="password" />
+				<input type="submit" value="submit" />
+			</form>
+		</div>
 	</body>
 </html>
