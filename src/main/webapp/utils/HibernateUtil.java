@@ -1,5 +1,9 @@
 package src.main.webapp.utils;
 
+import main.webapp.pojo.ClassList;
+import main.webapp.pojo.Student;
+import main.webapp.pojo.Subject;
+import main.webapp.pojo.Teacher;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -13,7 +17,11 @@ public class HibernateUtil {
     static {
         if (sessionFactory == null) {
             try {
-                Configuration cfg = new Configuration().configure().addAnnotatedClass(src.main.webapp.pojo.Admin.class);
+                Configuration cfg = new Configuration().configure().addAnnotatedClass(src.main.webapp.pojo.Admin.class)
+                        .addAnnotatedClass(ClassList.class)
+                        .addAnnotatedClass(Subject.class)
+                        .addAnnotatedClass(Student.class)
+                        .addAnnotatedClass(Teacher.class);
                 StandardServiceRegistry ssRegistry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();
                 sessionFactory = cfg.buildSessionFactory(ssRegistry);
             } catch (Exception ex) {

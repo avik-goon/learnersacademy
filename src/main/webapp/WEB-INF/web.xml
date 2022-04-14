@@ -20,4 +20,38 @@
         <servlet-name>logout</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>master_class_list</servlet-name>
+        <servlet-class>main.webapp.com.learnersacademy.MasterClassList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>master_class_list</servlet-name>
+        <url-pattern>/master_class_list</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>master_subject_list</servlet-name>
+        <servlet-class>main.webapp.com.learnersacademy.MasterSubjectCreator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>master_subject_list</servlet-name>
+        <url-pattern>/master_subject_list</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>master_student_list</servlet-name>
+        <servlet-class>main.webapp.com.learnersacademy.StudentCreator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>master_student_list</servlet-name>
+        <url-pattern>/master_student_list</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>master_teacher_list</servlet-name>
+        <servlet-class>main.webapp.com.learnersacademy.TeacherCreator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>master_teacher_list</servlet-name>
+        <url-pattern>/master_teacher_list</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
