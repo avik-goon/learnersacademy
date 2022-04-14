@@ -42,7 +42,7 @@ src.main.webapp.pojo.Admin admin = new Admin();
 			<form action="login">
 				<input type="text" value="admin"  name="uname" placeholder="username" />
 				<input type="password" value="123456" name="password" placeholder="password" />
-				<input type="submit" value="submit" />
+				<input type="submit" value="Login" />
 			</form>
 		</div>
 	</body>

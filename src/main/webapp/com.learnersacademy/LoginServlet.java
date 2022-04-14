@@ -9,6 +9,7 @@ import org.hibernate.query.Query;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -33,8 +34,13 @@ public class LoginServlet extends HttpServlet {
                             Admin admin1 = (Admin) a;
                             System.out.println( admin1.getUsername() );
                         }
+                        HttpSession session1 = request.getSession();
+                        session1.setAttribute("username", username);
+                        response.sendRedirect("dashboard.jsp");
                     }
-                    else rs.println("<h1>Wrong Credentials</h1>");
+                    else {
+                        rs.println("<h1>Wrong Credentials</h1>");
+                    }
                 }catch (Exception e){
                     System.out.println(e.getLocalizedMessage());
                 }
